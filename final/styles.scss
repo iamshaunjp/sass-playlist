@@ -1,0 +1,84 @@
+@import "reset";
+@import "variables";
+@import "mixins";
+
+#main-nav{
+  background: $deepBlue;
+  ul{
+    width: 100%;
+  }
+  li{
+    float: left;
+    width: (100% / 6);
+    @include mQ(600px){
+      width: 100%;
+    }
+  }
+  a{
+    color: $offWhite;
+    text-decoration: none;
+    padding: 16px;
+    display: block;
+    text-align: center;
+    &:hover{
+      background: lighten($deepBlue, 6);
+    }
+  }
+
+  @include clearFix;
+}
+
+section h1{
+  margin: 40px 0;
+  text-align: center;
+  text-transform: uppercase;
+  color: $deepBlue;
+  font-size: $sectionHeading;
+}
+
+#services{
+  li{
+    float: left;
+    width: 33.33%;
+    box-sizing: border-box;
+    text-align: center;
+  }
+  img{
+    width: 60%;
+    margin: 20px 20%;
+  }
+  a{
+    text-decoration: none;
+    color: $deepBlue;
+    font-weight: bold;
+    &:hover{
+      color: complement($deepBlue);
+    }
+  }
+  @include clearFix;
+  margin-bottom: 60px;
+}
+
+.lead-banner{
+  @include banner;
+  text-align: right;
+}
+
+.lessons-banner{
+  @include banner;
+  text-align: left;
+
+  li{
+    text-transform: uppercase;
+    font-size: 20px;
+    max-width: 500px;
+    margin: 60px 0;
+  }
+}
+
+#projects li{
+  @include grid(6, 2%);
+  img{
+    width: 100%;
+  }
+}
