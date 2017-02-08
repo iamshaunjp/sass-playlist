@@ -15,7 +15,7 @@
     display: block;
     text-transform: uppercase;
     font-weight: bold;
-    @include mQ(1200px, "min-width"){
+    @include mQ(3000px, 1200px){
       font-size: 68px;
     }
   }
@@ -23,7 +23,7 @@
     font-weight: normal;
     margin-bottom: 30px;
   }
-  @include mQ(1200px, "min-width"){
+  @include mQ(1200px){
     max-height: 640px;
     overflow: hidden;
   }
@@ -54,7 +54,7 @@
     }
   }
   @if length($args) == 2{
-    @media screen and (nth($args, 2): nth($args, 1)){
+    @media screen and (max-width: nth($args, 1)) and (min-width: nth($args, 2)){
       @content;
     }
   }
