@@ -1,0 +1,67 @@
+@import "reset";
+@import "variables";
+@import "mixin";
+#main-nav {
+    background: $deepBlue;
+    ul {
+        width: 100%;
+        @include clearfix;
+    }
+    li {
+        float: left;
+        width: (100% / 6);
+    }
+    a {
+        color: $offWhite;
+        text-decoration: none;
+        padding: 16px;
+        display: block;
+        text-align: center;
+        &:hover {
+            background: #333;
+        }
+    }
+} //End Main Nav
+section h1 {
+    font-size: $sectionHeading;
+    color: $deepBlue;
+}
+
+.lead-banner {
+    @include banner;
+    text-align: right;
+}
+
+.lessons-banner {
+    @include banner;
+    li {
+        text-transform: uppercase;
+        font-size: 20px;
+        max-width: 500px;
+        margin: 60px 0;
+    }
+}
+
+#services {
+    margin-bottom: 6px;
+    li {
+        float: left;
+        box-sizing: border-box;
+        text-align: center;
+    }
+    img {
+        width: 60%;
+        margin: 20px 20%;
+    }
+    a {
+        text-decoration: none;
+        color: $deepBlue;
+        font-weight: bold;
+        &:hover {
+            color: red;
+        }
+    }
+    ul {
+        @include clearfix;
+    }
+}
