@@ -18,7 +18,7 @@
         display: block;
         text-align: center;
         &:hover {
-            background: #333;
+            background: lighten($deepBlue, 6);
         }
     }
 } //End Main Nav
@@ -48,6 +48,10 @@ section h1 {
         float: left;
         box-sizing: border-box;
         text-align: center;
+        width: (100% / 3);
+        @include mQ(600px) {
+            width: 100%;
+        }
     }
     img {
         width: 60%;
@@ -58,10 +62,22 @@ section h1 {
         color: $deepBlue;
         font-weight: bold;
         &:hover {
-            color: red;
+            color: complement($deepBlue);
         }
     }
     ul {
         @include clearfix;
+    }
+}
+
+#projects {
+    ul {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    li {
+        margin: 10px;
     }
 }
