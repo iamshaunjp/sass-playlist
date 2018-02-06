@@ -43,15 +43,15 @@ section h1 {
 }
 
 #services {
-    margin-bottom: 6px;
+    margin: 20px 0;
     li {
         float: left;
         box-sizing: border-box;
         text-align: center;
         width: (100% / 3);
-        @include mQ(600px) {
-            width: 100%;
-        }
+        // @include mQ(600px) {
+        //     width: 100%;
+        // }
     }
     img {
         width: 60%;
